@@ -5,14 +5,18 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "types": ["@storybook/react"]
   },
   "include": [
     "next-env.d.ts",
     "next.config.js",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "orval.config.js",
+    ".storybook/**/*",
+    "mock/**/*.js"
   ],
   "exclude": ["node_modules"]
 }
