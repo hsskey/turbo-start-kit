@@ -1,0 +1,1 @@
+export { injectMantineStyles } from './injectMantineStyles'
