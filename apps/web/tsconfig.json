@@ -6,7 +6,11 @@
         "name": "next"
       }
     ],
-    "types": ["@storybook/react"]
+    "types": ["@storybook/react"],
+    "baseUrl": ".",
+    "paths": {
+      "@src/components/*": ["src/components/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -14,9 +18,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "orval.config.js",
+    "orval.config.cjs",
     ".storybook/**/*",
-    "mock/**/*.js"
+    "mock/**/*.js",
+    "postcss.config.cjs"
   ],
   "exclude": ["node_modules"]
 }

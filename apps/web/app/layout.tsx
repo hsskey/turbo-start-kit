@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { ColorScheme, injectMantineStyles } from '@repo/ui'
+
+import Providers from '@src/components/Providers'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -21,10 +24,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  injectMantineStyles()
+
   return (
     <html lang="en">
+      <head>
+        <ColorScheme />
+        <title>turbo-start-kit</title>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
