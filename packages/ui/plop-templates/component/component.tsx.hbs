@@ -1,0 +1,9 @@
+import { PropsWithChildren } from 'react'
+import type { {{pascalCase name}}Props as Mantine{{pascalCase name}}Props } from '@mantine/core'
+import { {{pascalCase name}} as Mantine{{pascalCase name}} } from '@mantine/core'
+
+interface {{pascalCase name}}Props extends Mantine{{pascalCase name}}Props, PropsWithChildren {}
+
+export function {{pascalCase name}}({ children, ...props }: {{pascalCase name}}Props) {
+  return <Mantine{{pascalCase name}} {...props}>{children}</Mantine{{pascalCase name}}>
+}
